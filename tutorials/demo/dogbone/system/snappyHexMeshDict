@@ -29,44 +29,26 @@ addLayers       false;
 // - to 'snap' the mesh boundary to the surface
 geometry
 {
-    inlet.stl
+    dogbone.stl
     {
         type triSurfaceMesh;
-        name inlet;
+        name dogbone;
         regions
         {
             inlet //name in STL
             {
                 name inlet; //final patch name
             }
-        }
-    }
-    outlet.stl
-    {
-        type triSurfaceMesh;
-        name outlet;
-        regions
-        {
             outlet //name in STL
             {
                 name outlet; //final patch name
             }
-        }
-    }
-    walls.stl
-    {
-        type triSurfaceMesh;
-        name walls;
-        regions
-        {
             walls //name in STL
             {
                 name walls; //final patch name
             }
         }
     }
-
-
     //refinementBox
     //{
     //    type searchableBox;
@@ -123,7 +105,7 @@ castellatedMeshControls
     // This is a featureEdgeMesh, read from constant/triSurface for now.
     features
     (
-        {
+        /*{
            file "inlet.eMesh";
             level 1;
         }
@@ -134,7 +116,7 @@ castellatedMeshControls
         {
             file "walls.eMesh";
             level 1;
-        }
+        }*/
     );
 
 
@@ -150,7 +132,7 @@ castellatedMeshControls
 
     refinementSurfaces
     {
-        "(inlet|outlet|walls)"
+        dogbone
         {
             // Surface-wise min and max refinement level
             level (1 2);
@@ -379,6 +361,8 @@ writeFlags
 // Merge tolerance. Is fraction of overall bounding box of initial mesh.
 // Note: the write tolerance needs to be higher than this.
 mergeTolerance 1e-6;
+
+debug 0;
 
 
 // ************************************************************************* //

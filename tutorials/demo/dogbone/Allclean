@@ -13,3 +13,8 @@ rm plot.png
 cleanCase
 foamClearPolyMesh
 rm nohup.out
+
+rm constant/cellLevel
+rm constant/pointLevel
+rm out.set
+

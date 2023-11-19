@@ -840,3 +840,35 @@ vertex 38.500000 0.000000 -5.000000
 endloop
 endfacet
 endsolid walls
+solid inlet
+facet normal -1.000000 0.000000 0.000000
+outer loop
+vertex -0.000000 4.000000 10.000000
+vertex -0.000000 0.000000 -10.000000
+vertex -0.000000 0.000000 10.000000
+endloop
+endfacet
+facet normal -1.000000 0.000000 0.000000
+outer loop
+vertex -0.000000 4.000000 10.000000
+vertex -0.000000 4.000000 -10.000000
+vertex -0.000000 0.000000 -10.000000
+endloop
+endfacet
+endsolid inlet
+solid outlet
+facet normal 1.000000 0.000000 0.000000
+outer loop
+vertex 150.000000 4.000000 -10.000000
+vertex 150.000000 0.000000 10.000000
+vertex 150.000000 0.000000 -10.000000
+endloop
+endfacet
+facet normal 1.000000 0.000000 0.000000
+outer loop
+vertex 150.000000 4.000000 -10.000000
+vertex 150.000000 4.000000 10.000000
+vertex 150.000000 0.000000 10.000000
+endloop
+endfacet
+endsolid outlet
